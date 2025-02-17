@@ -1,8 +1,5 @@
 # Hacker-Guide: Grundlagen und Werkzeuge für Ethical Hacking
 
-## 🔹 Einführung
-Hacking bezieht sich auf das Analysieren und Manipulieren von Computersystemen, Netzwerken und Anwendungen. Ethical Hacking wird für Sicherheitsanalysen und Penetrationstests genutzt, um Schwachstellen aufzudecken und Systeme zu schützen.
-
 ## 🔹 Grundlagen des Hackings
 ### 1. Hacking-Kategorien
 - **White-Hat**: Sicherheitsexperten, die Systeme schützen
