@@ -96,7 +96,7 @@ Das Pipe-Symbol (`|`) leitet die Ausgabe eines Befehls als Eingabe an einen ande
 
 
 
-### Nützliche Tools
+## Nützliche Tools
 | Tool | Beschreibung |
 |------|-------------|
 | `htop` | Erweiterte Prozessverwaltung mit interaktiver Ansicht |
