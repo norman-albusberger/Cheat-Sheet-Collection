@@ -78,6 +78,24 @@
 | `scp user@server:/pfad/datei .` | Datei von einem Server herunterladen | - |
 | `scp -P 2222 datei user@server:/pfad` | Port für SCP ändern | -P (Portnummer angeben) |
 
+
+## 🔹 Arbeiten mit Pipes (`|`)
+
+Das Pipe-Symbol (`|`) leitet die Ausgabe eines Befehls als Eingabe an einen anderen Befehl weiter.
+
+### Beispiele:
+
+| Befehl                | Beschreibung                                     |
+| --------------------- | ---------------------------------------------- |
+| `ls -lah | grep '.txt'`     | Zeigt nur `.txt`-Dateien aus der `ls`-Liste |
+| `ps aux | grep firefox`     | Sucht den Prozess `firefox` in der Liste aller Prozesse |
+| `cat datei.txt | wc -l`     | Zählt die Zeilen in einer Datei |
+| `df -h | grep '/dev/sda1'`  | Zeigt den Speicherplatz für `/dev/sda1` |
+| `cat /var/log/syslog | less` | Ermöglicht das Scrollen durch die System-Logs |
+
+
+
+
 ### Nützliche Tools
 | Tool | Beschreibung |
 |------|-------------|
