@@ -93,5 +93,4 @@
 | `sqlmap` | Automatisches SQL-Injection-Tool zur Sicherheitsanalyse |
 | `nikto` | Webserver-Sicherheitsprüfungstool |
 
-Viel Erfolg mit Ubuntu! 🚀
 
