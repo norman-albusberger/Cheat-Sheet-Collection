@@ -138,6 +138,61 @@ open ~/RecoveredFiles
 
 ---
 
+## 🕵️‍♂️ Forensik-Einsatz mit `foremost`
+
+`foremost` wurde ursprünglich für den forensischen Einsatz entwickelt und eignet sich ideal zur Analyse von Rohdaten auf Speichermedien – selbst wenn das Dateisystem beschädigt ist.
+
+### 🔍 Arbeiten mit Disk-Images
+
+Anstatt direkt auf dem Originaldatenträger zu arbeiten, empfiehlt sich im forensischen Kontext das Erstellen eines Abbilds (z. B. `.img` oder `.dd`) und die anschließende Analyse dieses Images:
+
+```bash
+sudo dd if=/dev/disk2 of=~/Desktop/sdcard.img bs=4m
+```
+
+Dann:
+
+```bash
+sudo foremost -i ~/Desktop/sdcard.img -o ~/RecoveredFromImage
+```
+
+✅ So vermeidest du, versehentlich Daten auf dem Originaldatenträger zu verändern.
+
+### 📁 Analyse von komprimierten und eingebetteten Formaten
+
+`foremost` erkennt auch Daten, die sich innerhalb von:
+
+- ZIP-Archiven
+- Office-Dokumenten (z. B. `.docx`, `.xlsx`)
+- PDF-Dateien
+
+befinden, sofern sie durch klare Datei-Signaturen auffindbar sind.
+
+### 🧰 Verwendung angepasster Signatur-Dateien
+
+Im Forensik-Bereich ist es üblich, mit speziell angepassten `foremost.conf`-Dateien zu arbeiten, um z. B. auch proprietäre oder seltene Dateiformate zu erkennen.
+
+Beispiel:
+
+```conf
+eml     y       2000000      From:             
+
+
+```
+
+### 📜 Logfiles für die Dokumentation
+
+`foremost` erzeugt automatisch Logdateien, z. B.:
+
+- `audit.txt`: Übersicht über alle gefundenen Dateien und Typen
+- `foremost.log`: Detaillierte Informationen zur Analyse
+
+Diese Logs sind nützlich für gerichtsfeste Dokumentationen und zur Nachvollziehbarkeit der Datenrettung.
+
+---
+
+
+
 ## 📚 Weitere Infos
 
 - Offizielle Webseite: [https://foremost.sourceforge.net/](https://foremost.sourceforge.net/)
