@@ -141,4 +141,3 @@ open ~/RecoveredFiles
 ## 📚 Weitere Infos
 
 - Offizielle Webseite: [https://foremost.sourceforge.net/](https://foremost.sourceforge.net/)
-- Quellcode: [GitHub Mirror](https://github.com/jadell/foremost)
